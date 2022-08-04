@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background: #1b1c22;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.title h1 {
+  font-size: 100px;
+}
+.title h2 {
+  font-size: 50px;
+}
