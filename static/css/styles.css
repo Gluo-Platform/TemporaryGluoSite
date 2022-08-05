@@ -3,18 +3,152 @@ body {
   background: #1b1c22;
   color: #fff;
   font-family: 'Montserrat';
-}
-
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
-.title h1 {
-  font-size: 100px;
+
+.contents {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
-.title h2 {
-  font-size: 50px;
+.contents-left {
+  flex: 50%;
+}
+.contents-left h1 {
+  font-size: 75px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin: 5% 5%;
+  background: -webkit-linear-gradient(#0d6dea, #5ca3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contents-right {
+  flex: 50%;
+}
+.contents-right img {
+  width: 75%;
+}
+
+.timer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.colon {
+  flex: 8%;
+  display: flex;
+  flex-direction: column;
+}
+.time-item {
+  flex: 20.5%;
+}
+.time-item h2 {
+  color: #4b4d58;
+  margin: 20px 0px;
+}
+.time-item span, .colon span {
+  font-size: 75px;
+}
+.colon span {
+  margin-top: auto;
+}
+
+/* Oops */
+.oops-content {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+}
+.oops-left {
+  flex: 40%;
+  float: left;
+}
+.oops-left h1{
+  font-size: 70px;
+}
+.oops-right {
+  flex: 60%;
+  float: right;
+}
+.oops-right img {
+  margin-top: 5%;
+  width: 70%;
+}
+
+/* Discord button */
+a.discord-button {
+  text-decoration: none;
+}
+.discord-button {
+  width: fit-content;
+  display: flex;
+  height: 50px;
+  padding: 0;
+  background: #5865F2;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.discord-button__text,
+.discord-button__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #fff;
+  height: 100%;
+}
+.discord-button__icon {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Back button */
+.back {
+  margin: 2%;
+}
+button.back {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; 
+  background: #0d6dea; 
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 0 10px #0d6dea;
+  position: absolute;
+  left: 0;
+}
+button.back:hover {
+  background: #257df0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .contents {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contents-left {
+    margin: 12.5% 0px 12.5% 0px;
+  }
+  .contents-left h1 {
+    font-size: 50px;
+    margin: 5% 0px;
+  }
+
+  .time-item h2 {
+    font-size: 15px;
+  }
+  .time-item span, .colon span {
+    font-size: 40px;
+  }
 }

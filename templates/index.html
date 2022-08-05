@@ -4,16 +4,62 @@
   <title>Gluo - Coming Soon!</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}"> 
   
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
   <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
+  
+  <script src="https://kit.fontawesome.com/697d2afc76.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 </head>
 <body>
-  <div class="title">
-    <h1>Gluo is coming soon!</h1>
-    <h2>Releasing in: <span id="countdown"></span></h2>
+  <div class="contents">
+    <div class="contents-left">
+      <h1>Coming soon</h1>
+
+      <div class="timer">
+        <div class="time-item">
+          <h2>Days</h2> <br>
+          <span id="days"></span>
+        </div>
+        
+        <div class="colon"><span>:</span></div>
+        
+        <div class="time-item">
+          <h2>Hours</h2> <br>
+          <span id="hours"></span>
+        </div>
+        
+        <div class="colon"><span>:</span></div>
+        
+        <div class="time-item">
+          <h2>Minutes</h2> <br>
+          <span id="minutes"></span>
+        </div>
+        
+        <div class="colon"><span>:</span></div>
+        
+        <div class="time-item">
+          <h2>Seconds</h2> <br>
+          <span id="seconds"></span>
+        </div>
+      </div>
+
+      <center>
+        <a class="discord-button" onclick="window.open('https://discord.gg/SV2WSmMEex')">
+          <span class="discord-button__text">Join our Discord server</span>
+          <span class="discord-button__icon">
+            <i class="fab fa-discord"></i>
+          </span>
+        </a>
+      </center>
+    </div>
+    <div class="contents-right">
+      <img src="/static/images/waving_gluo.png">
+    </div>
   </div>
 </body> 
 </html>

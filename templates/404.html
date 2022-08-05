@@ -8,12 +8,24 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-  <script src="{{ url_for('static', filename='js/countdown.css') }}"></script>
+  <script src="https://kit.fontawesome.com/697d2afc76.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 </head>
 <body>
-  <div class="title">
-    <h1>Oops! This page does not exist</h1>
-    <button>Home</button>
+  <div class="oops">
+    <button class="primary-btn back" type="button" onclick="location.href='/{{ back }}';"><i class="fas fa-long-arrow-alt-left"></i>&emsp; Home</button>
+    
+    <div class="oops-content">
+      <div class="oops-left">
+        <h1>Oops!</h1>
+        <p> 
+          Something went wrong! This page does not exist! <br>
+        </p> 
+      </div>
+      <div class="oops-right">
+        <img src="/static/images/oops.png"/>
+      </div>
+    </div>
   </div>
 </body> 
 </html>
