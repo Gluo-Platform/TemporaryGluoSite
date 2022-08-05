@@ -1,11 +1,15 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, redirect
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
   return render_template('index.html')
+
+@app.route('/discord')
+def discord():
+  return redirect('https://discord.com/invite/SV2WSmMEex')
 
 @app.errorhandler(404)
 def page_not_found(e):
