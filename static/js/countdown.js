@@ -1,30 +1,21 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Aug 12, 2022 12:00:00").getTime();
+'use strict'
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+const countdowndate = new Date("Aug 12, 2022 12:00:00 GMT+2")
+const _ = setInterval(() => {
+    const currentdate = new Date().getTime();
+    const diff = countdowndate - currentdate
 
-  // Get today's date and time
-  var now = new Date().getTime();
+    // calculate the days, hourse, minutes and seconds
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // the actual output 
+    document.getElementById("days").innerHTML = d;
+    document.getElementById("hours").innerHTML = h;
+    document.getElementById("minutes").innerHTML = m;
+    document.getElementById("seconds").innerHTML = s;
     
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Released!";
-  }
-}, 1000);
+    diff < 0 ? clearInterval(_) : document.getElementById("countdown").innerHTML = "Released!";
+})
